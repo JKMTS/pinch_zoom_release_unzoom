@@ -174,7 +174,7 @@ class _TestPinchWithScrollState extends State<TestPinchWithScroll> {
                     color: Colors.deepOrange,
                     width: 300,
                     height: 300,
-                    child: const Column(children: [
+                    child: Column(children: const [
                       Text(
                           'The purpose of this text is to be an example that you can pinch any widget'),
                       SizedBox(
@@ -188,7 +188,7 @@ class _TestPinchWithScrollState extends State<TestPinchWithScroll> {
                     color: Colors.deepOrange,
                     width: 300,
                     height: 300,
-                    child: const Column(children: [
+                    child: Column(children: const [
                       Text(
                           'The purpose of this text is to be an example that you switch the zoomChild if you just set the zoomChild parameter'),
                       SizedBox(

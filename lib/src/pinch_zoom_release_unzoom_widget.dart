@@ -123,12 +123,14 @@ class _PinchZoomReleaseUnzoomWidgetState
 
   @override
   void initState() {
+    debugPrint('inside the init state &&&&&&&&&&');
     super.initState();
     PinchZoomLogger().logFlag = widget.log;
   }
 
   @override
   void dispose() {
+    debugPrint('inside the dispose  ********');
     controller.dispose();
     animationController.dispose();
 
