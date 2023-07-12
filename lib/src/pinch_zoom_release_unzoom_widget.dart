@@ -124,21 +124,6 @@ class _PinchZoomReleaseUnzoomWidgetState
   @override
   void initState() {
     debugPrint('inside the init state &&&&&&&&&&');
-    super.initState();
-    PinchZoomLogger().logFlag = widget.log;
-  }
-
-  @override
-  void dispose() {
-    debugPrint('inside the dispose  ********');
-    controller.dispose();
-    animationController.dispose();
-
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
     controller = TransformationController();
     animationController = AnimationController(
       vsync: this,
@@ -154,9 +139,21 @@ class _PinchZoomReleaseUnzoomWidgetState
           }
         },
       );
-
-    return buildWidget(widget.child);
+    super.initState();
+    PinchZoomLogger().logFlag = widget.log;
   }
+
+  @override
+  void dispose() {
+    debugPrint('inside the dispose  ********');
+    controller.dispose();
+    animationController.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => buildWidget(widget.child);
 
   void resetAnimation() {
     if (mounted) {
